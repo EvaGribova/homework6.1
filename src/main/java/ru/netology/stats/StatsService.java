@@ -47,11 +47,17 @@ public class StatsService {
     }
 
     public int getSalesBelowAverage(long[] sales) {
-        int averageSales = 15;
         int count = 0;
+        int amountSales = 0;
 
-        for (long i = 0; i < sales.length; i++) {
-            if (sales[(int) i] < averageSales) {
+        for (long i : sales) {
+            amountSales = (int) (amountSales + i);
+        }
+
+        int averageAmount = amountSales / sales.length;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageAmount) {
                 count++;
             }
         }
@@ -59,11 +65,17 @@ public class StatsService {
     }
 
     public int getSalesUnderAverage(long[] sales) {
-        int averageSales = 15;
         int count = 0;
+        int amountSales = 0;
 
-        for (long i = 0; i < sales.length; i++) {
-            if (sales[(int) i] > averageSales) {
+        for (long i : sales) {
+            amountSales = (int) (amountSales + i);
+        }
+
+        int averageAmount = amountSales / sales.length;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageAmount) {
                 count++;
             }
         }

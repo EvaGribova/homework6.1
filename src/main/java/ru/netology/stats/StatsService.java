@@ -3,23 +3,23 @@ package ru.netology.stats;
 public class StatsService {
 
     public int getAmountSales(long[] sales) {
-        int amountSales = 0;
+        long amountSales = 0;
 
         for (long i : sales) {
-            amountSales = (int) (amountSales + i);
+            amountSales = (amountSales + i);
         }
-        return amountSales;
+        return (int) amountSales;
     }
 
     public int getAverageAmount(long[] sales) {
-        int amountSales = 0;
+        long amountSales = 0;
 
         for (long i : sales) {
-            amountSales = (int) (amountSales + i);
+            amountSales = (amountSales + i);
         }
 
-        int averageAmount = amountSales / sales.length;
-        return averageAmount;
+        long averageAmount = amountSales / sales.length;
+        return (int) averageAmount;
     }
 
     public int getMaxSales(long[] sales) {
@@ -48,13 +48,13 @@ public class StatsService {
 
     public int getSalesBelowAverage(long[] sales) {
         int count = 0;
-        int amountSales = 0;
+        long amountSales = 0;
 
         for (long i : sales) {
-            amountSales = (int) (amountSales + i);
+            amountSales = (amountSales + i);
         }
 
-        int averageAmount = amountSales / sales.length;
+        long averageAmount = amountSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageAmount) {
@@ -66,13 +66,13 @@ public class StatsService {
 
     public int getSalesUnderAverage(long[] sales) {
         int count = 0;
-        int amountSales = 0;
+        long amountSales = 0;
 
         for (long i : sales) {
-            amountSales = (int) (amountSales + i);
+            amountSales = (amountSales + i);
         }
 
-        int averageAmount = amountSales / sales.length;
+        long averageAmount = amountSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageAmount) {

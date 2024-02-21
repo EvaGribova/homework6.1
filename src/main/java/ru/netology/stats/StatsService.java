@@ -2,16 +2,16 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int getAmountSales(long[] sales) {
+    public long getAmountSales(long[] sales) {
         long amountSales = 0;
 
         for (long i : sales) {
             amountSales = (amountSales + i);
         }
-        return (int) amountSales;
+        return amountSales;
     }
 
-    public int getAverageAmount(long[] sales) {
+    public long getAverageAmount(long[] sales) {
         long amountSales = 0;
 
         for (long i : sales) {
@@ -19,7 +19,7 @@ public class StatsService {
         }
 
         long averageAmount = amountSales / sales.length;
-        return (int) averageAmount;
+        return averageAmount;
     }
 
     public int getMaxSales(long[] sales) {

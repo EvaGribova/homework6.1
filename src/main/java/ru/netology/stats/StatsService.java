@@ -12,11 +12,13 @@ public class StatsService {
     }
 
     public long getAverageAmount(long[] sales) {
-        long amountSales = 0;
+        long amountSales = getAmountSales(sales);
 
-        for (long i : sales) {
-            amountSales = (amountSales + i);
-        }
+        //long amountSales = 0;
+
+        //for (long i : sales) {
+        //    amountSales = (amountSales + i);
+        //}
 
         long averageAmount = amountSales / sales.length;
         return averageAmount;
@@ -48,13 +50,14 @@ public class StatsService {
 
     public int getSalesBelowAverage(long[] sales) {
         int count = 0;
-        long amountSales = 0;
+        long averageAmount = getAverageAmount(sales);
+        //long amountSales = 0;
 
-        for (long i : sales) {
-            amountSales = (amountSales + i);
-        }
+        //for (long i : sales) {
+        //    amountSales = (amountSales + i);
+        //}
 
-        long averageAmount = amountSales / sales.length;
+        //long averageAmount = amountSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageAmount) {
@@ -66,13 +69,14 @@ public class StatsService {
 
     public int getSalesUnderAverage(long[] sales) {
         int count = 0;
-        long amountSales = 0;
+        long averageAmount = getAverageAmount(sales);
+        //long amountSales = 0;
 
-        for (long i : sales) {
-            amountSales = (amountSales + i);
-        }
+       // for (long i : sales) {
+        //    amountSales = (amountSales + i);
+        //}
 
-        long averageAmount = amountSales / sales.length;
+        //long averageAmount = amountSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageAmount) {
